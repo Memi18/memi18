@@ -516,12 +516,7 @@ select:disabled {
   display: none !important;
 }
 
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
+
 
 button:not(:disabled),
 [type=button]:not(:disabled),
@@ -580,7 +575,7 @@ legend+* {
 }
 
 [type=search] {
-  -webkit-appearance: textfield;
+
   outline-offset: -2px;
 }
 
@@ -600,10 +595,6 @@ legend+* {
   padding: 0;
 }
 
-::file-selector-button {
-  font: inherit;
-  -webkit-appearance: button;
-}
 
 output {
   display: inline-block;
@@ -13825,7 +13816,3 @@ fieldset:disabled .btn {
   }
 }
 
-.CartWidget {
-  background-color: red;
-  size: 10px;
-}
