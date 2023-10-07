@@ -13816,3 +13816,28 @@ fieldset:disabled .btn {
   }
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+}
+
+.logo-image {
+  width: 300px;
+
+}
+@font-face {
+  font-family: 'FontBatman';
+  src: url('./assets/fonts/batmfa__.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  font-family: 'FontBatman', sans-serif;
+}
+.greeting {
+ display: flex;
+ justify-content: center; 
+}
