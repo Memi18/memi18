@@ -1,0 +1,22 @@
+.comic-item p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.comic-item button {
+    background-color: black;
+    color: red;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+.comic-item button:hover {
+    background-color: black;
+}
+
+.comic-item button:focus {
+    outline: none;
+}

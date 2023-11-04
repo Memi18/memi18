@@ -1,13 +1,13 @@
-import cart from "./assests/Cart.png"
-
+import cart from "./assests/Cart.jpg";
+import "./assests/Cart.css"
 
 const CartWidget = () => {
     return (
-        <div>
-            <img src={cart} alt="cart-widget " style={{ width: "20px" }} />
-            0
+        <div className="cart-widget">
+            <img src={cart} alt="Cart" style={{ width: "30px" }} />
+            <span>0</span>
         </div>
-    )
+    );
 }
 
-export default CartWidget
+export default CartWidget;

@@ -4439,7 +4439,7 @@ fieldset:disabled .btn {
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+  --bs-navbar-color: white;
   --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
   --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
@@ -13837,7 +13837,30 @@ fieldset:disabled .btn {
 body {
   font-family: 'FontBatman', sans-serif;
 }
+
 .greeting {
- display: flex;
- justify-content: center; 
+  display: flex;
+  justify-content: center;
 }
+
+.Navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+
+.Navbar a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+
+.Navbar a:hover {
+  text-decoration: underline;
+}
+
