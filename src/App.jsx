@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Logo from './components/Logo/Logo';
+import Logo from './components/Cat/Logo';
 import ItemListContainer from './components/ItemsListContainer/ItemListContainer';
 import { CartProvider } from './components/context/CartContext';
 import CheckoutForm from './components/Cart/CheckoutForm';
