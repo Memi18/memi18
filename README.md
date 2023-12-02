@@ -66,5 +66,5 @@ Contexto de React utilizado para gestionar el estado del carrito.
 
 1. Clona el repositorio: `git clone https://github.com/Memi18/memi18`
 2. Instala las dependencias: `npm install`
-3. Inicia la aplicación: `npm start`
+3. Inicia la aplicación: `npm run dev`
 
