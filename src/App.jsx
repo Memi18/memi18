@@ -1,16 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Logo from './components/Logo/Logo';
 import ItemListContainer from './components/ItemsListContainer/ItemListContainer';
-import NavBar from "./components/NavBar/NavBar.jsx";
 import { CartProvider } from './components/context/CartContext';
 import CheckoutForm from './components/Cart/CheckoutForm';
+import NavBar from "./components/NavBar/navBar"
 
 function App() {
   return (
     <BrowserRouter>
-      {}
       <CartProvider>
-        <NavBar />
+        <NavBar />  {}
         <Logo />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />

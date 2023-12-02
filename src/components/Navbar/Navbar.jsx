@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 
-const NavBar = () => {
+const navBar = () => {
   return (
 
     <div className='Navbar'>
@@ -17,5 +17,5 @@ const NavBar = () => {
 
   );
 };
-
-export default NavBar;
+ 
+export default navBar;
