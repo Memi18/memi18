@@ -3,7 +3,7 @@ import Logo from './components/Logo/Logo';
 import ItemListContainer from './components/ItemsListContainer/ItemListContainer';
 import { CartProvider } from './components/context/CartContext';
 import CheckoutForm from './components/Cart/CheckoutForm';
-import NavBar from "./components/NavBar/navBar"
+import NavBar from "./components/Barra/NavBar"
 
 function App() {
   return (
