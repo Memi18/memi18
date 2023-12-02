@@ -2,17 +2,22 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Logo from './components/Logo/Logo';
 import ItemListContainer from './components/ItemsListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
+import { CartProvider } from './components/context/CartContext';
+import CheckoutForm from './components/Cart/CheckoutForm';
+
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <Logo />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/" element={<ItemListContainer />} />
-        <Route path="/category/:category" element={<ItemListContainer />} />
-
-      </Routes>
+      {}
+      <CartProvider>
+        <NavBar />
+        <Logo />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:category" element={<ItemListContainer />} />
+          <Route path="/checkout" element={<CheckoutForm />} />
+        </Routes>
+      </CartProvider>
     </BrowserRouter>
   );
 }

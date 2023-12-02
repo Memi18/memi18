@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
-import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import { getComicsByCategory, getProducts } from './Comics';
 
@@ -27,10 +26,5 @@ const ItemListContainer = () => {
   );
 };
 
-
-
-ItemListContainer.propTypes = {
-  greeting: PropTypes.string.isRequired,
-};
 
 export default ItemListContainer;

@@ -1,13 +1,22 @@
-import  { useState } from 'react';
+import { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import './Item.css';
 import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
+import './Item.css';
+
 
 const Item = ({ comic }) => {
     const [mostrarDetalle, setMostrarDetalle] = useState(false);
+    const { addItem } = useContext(CartContext);
+    const navigate = useNavigate();
 
     const toggleDetalle = () => {
         setMostrarDetalle(!mostrarDetalle);
+    };
+
+    const handleCheckout = () => {
+        navigate('/checkout');
     };
 
     return (
@@ -15,19 +24,21 @@ const Item = ({ comic }) => {
             <img src={comic.imagen} alt={comic.titulo} />
             <h2>{comic.titulo}</h2>
             {mostrarDetalle ? (
-                <div>
+                <div className="comic-details">
                     <p>{comic.resena}</p>
-                    <ItemCount stock={comic.stock} initial={1} onAdd={console.log} /> {}
+                    <ItemCount stock={comic.stock} initial={1} onAdd={(quantity) => addItem(comic, quantity)} />
+                    <div className="button-container">
+                        <button onClick={handleCheckout}>Ir a Checkout</button>
+                        <button className="hide-button" onClick={toggleDetalle}>Ocultar detalle</button>
+                    </div>
                 </div>
             ) : (
-                <p></p>
+                <button className="show-button" onClick={toggleDetalle}>Ver detalle</button>
             )}
-            <button onClick={toggleDetalle}>
-                {mostrarDetalle ? "Ocultar detalle" : "Ver detalle"}
-            </button>
         </div>
     );
 };
+
 
 Item.propTypes = {
     comic: PropTypes.shape({

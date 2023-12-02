@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -11,7 +11,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     const decrement = () => {
-        if (quantity > 0) { 
+        if (quantity > 0) {
             setQuantity(quantity - 1);
         }
     }
@@ -24,9 +24,13 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <button className='Button' onClick={increment}>+</button>
             </div>
             <div>
-                <button className='Button' onClick={() => onAdd(quantity)} disabled={stock === 0}>
-                    Agregar al carrito
-                </button>
+                {stock === 0 ? (
+                    <p>Sin Stock</p>
+                ) : (
+                    <button className='Button' onClick={() => onAdd(quantity)}>
+                        Agregar al carrito
+                    </button>
+                )}
             </div>
         </div>
     );
